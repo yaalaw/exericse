@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+   http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+	<!-- 实例化对象,无参构造函数 -->
+	<bean id="sysUserMapper" class="com.mime.exercise.mapper.SysUserMapper">
+	</bean>
+	<!-- 有参构造函数 -->
+	<bean id="sysUserService" class="com.mime.exercise.service.impl.SysUserServiceImpl">
+		<!-- constructor-arg：通过构造函数注入 -->
+
+		<constructor-arg name="sysUserMapper" ref="sysUserMapper"></constructor-arg>
+	</bean>
+	<!--  property：通过setter对应的方法注入 -->
+
+	
+
+
+</beans>
+
+
+
+
+
+
+
